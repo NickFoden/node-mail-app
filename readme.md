@@ -1,4 +1,4 @@
-##Simple Node app that emails details from contact form to any email you want.
+## Simple Node app that emails details from contact form to any email you want.
 
 This repo requires you to add a config.js file with the following contents:
 
