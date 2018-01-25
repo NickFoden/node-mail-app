@@ -33,6 +33,18 @@ app.post("/send", (req, res) => {
     <h3>Message</h3>
     <p>${req.body.message}</p>
     `;
+  // SMTP transport
+  // let transporter = nodemailer.createTransport({
+  //     host: 'smtp.ethereal.email',
+  //     port: 587,
+  //     secure: false, // true for 465, false for other ports
+  //     auth: {
+  //         user: account.user, // generated ethereal user
+  //         pass: account.pass  // generated ethereal password
+  //     }
+  // });
+
+  //using sgTransport - see dependencies ->  const sgTransport = require("nodemailer-sendgrid-transport");
   let transporter = nodemailer.createTransport(sgTransport(sendGridOptions));
   let mailOptions = {
     from: '"Nick Foden" <nick@madeupaddress.com>',
